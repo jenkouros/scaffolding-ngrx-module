@@ -1,0 +1,10 @@
+import { createFeatureSelector, createSelector } from "@ngrx/store";
+
+// replace any with state interface
+const select<%= classify(name) %>State =
+  createFeatureSelector<any>("<%= camelize(name) %>");
+
+// EXAMPLE
+// export const selectExperiments = createSelector(
+//  selectExperimentsState,
+//  (state) => state.experiments);

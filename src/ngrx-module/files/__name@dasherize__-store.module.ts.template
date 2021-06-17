@@ -1,0 +1,22 @@
+import { NgModule } from "@angular/core";
+import { EffectsModule } from "@ngrx/effects";
+import { StoreModule } from "@ngrx/store";
+import { <%= classify(name) %>ApiService } from "./<%= dasherize(name) %>-api.service";
+import { <%= classify(name) %>FacadeService } from "./<%= dasherize(name) %>-facade.service";
+import { <%= classify(name) %>Effects } from "./<%= dasherize(name) %>.effects";
+import { <%= camelize(name) %>Reducer } from "./<%= dasherize(name) %>.reducer";
+// import { <%= classify(name) %>Resolver } from "./<%= dasherize(name) %>.resolver";
+
+
+@NgModule({
+  imports: [
+    StoreModule.forFeature("<%= camelize(name) %>", <%= classify(name) %>Reducer),
+    EffectsModule.forFeature([<%= classify(name) %>Effects]),
+  ],
+  providers: [
+    <%= classify(name) %>ApiService,
+    <%= classify(name) %>FacadeService,
+    // <%= classify(name) %>Resolver,
+  ],
+})
+export class <%= classify(name) %>StoreModule {}

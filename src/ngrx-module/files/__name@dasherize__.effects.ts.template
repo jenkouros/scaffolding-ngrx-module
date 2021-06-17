@@ -1,0 +1,29 @@
+import { Injectable } from "@angular/core";
+import { Actions, createEffect, ofType } from "@ngrx/effects";
+import { of } from "rxjs";
+import { catchError, map, mergeMap } from "rxjs/operators";
+import { <%= classify(name) %>ApiService } from "./<%= dasherize(name) %>-api.service";
+import * as <%= classify(name) %>Actions from "./<%= dasherize(name) %>.actions";
+
+@Injectable()
+export class <%= classify(name) %>Effects {
+  constructor(
+    private actions: Actions,
+    private <%= camelize(name) %>apiService: <%= classify(name) %>ApiService
+  ) {}
+
+  // example
+  // loadExperiments$ = createEffect(() =>
+  //   this.actions.pipe(
+  //     ofType(ExperimentsActions.loadExperiments),
+  //     mergeMap(() =>
+  //       this.experimentsApiService.getExperiments().pipe(
+  //         map((experiments) =>
+  //           ExperimentsActions.loadExperimentsSuccess({ experiments })
+  //         ),
+  //         catchError(() => of(ExperimentsActions.loadExperimentsFail()))
+  //       )
+  //     )
+  //   )
+  // );
+}

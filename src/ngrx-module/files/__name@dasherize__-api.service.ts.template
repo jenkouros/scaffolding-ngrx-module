@@ -1,0 +1,15 @@
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+
+
+@Injectable()
+export class <%= classify(name) %>ApiService {
+    constructor(private http: HttpClient) {}
+
+    // example
+    // getExperiments() {
+    //  return this.http.get<Experiment[]>(
+    //    this.settingsService.apiUrl + "/test/ExperimentsTest"
+    //  );
+    // }
+}

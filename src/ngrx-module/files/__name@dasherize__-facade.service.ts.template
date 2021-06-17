@@ -1,0 +1,20 @@
+import { Injectable } from "@angular/core";
+import { select, Store } from "@ngrx/store";
+import * as <%= classify(name) %>Actions from "./<%= dasherize(name) %>.actions";
+import * as <%= classify(name) %>Selectors from "./<%= dasherize(name) %>.selectors";
+
+@Injectable()
+export class <%= classify(name) %>FacadeService {
+  // selector example
+  // public experiments$ = this.store.pipe(
+  //  select(ExperimentsSelectors.selectExperiments)
+  // );
+
+  // ctor example
+  // constructor(private store: Store<ExperimentsState>) {}
+
+  // store call example
+  // loadExperiments() {
+  //  this.store.dispatch(ExperimentsActions.loadExperiments());
+  // }
+}
