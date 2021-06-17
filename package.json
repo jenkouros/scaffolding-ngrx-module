@@ -1,6 +1,6 @@
 {
-  "name": "ngrx-module",
-  "version": "0.0.0",
+  "name": "@jenko.uros/ngrx-module",
+  "version": "1.0.0",
   "description": "A blank schematics",
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -9,7 +9,7 @@
   "keywords": [
     "schematics"
   ],
-  "author": "",
+  "author": "Uroš Jenko",
   "license": "MIT",
   "schematics": "./src/collection.json",
   "dependencies": {
@@ -21,5 +21,14 @@
     "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "jasmine": "^3.5.0"
-  }
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenkouros/scaffolding-ngrx-module.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jenkouros/scaffolding-ngrx-module/issues"
+  },
+  "homepage": "https://github.com/jenkouros/scaffolding-ngrx-module#readme"
 }
