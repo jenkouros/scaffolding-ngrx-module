@@ -10,7 +10,7 @@ import { <%= camelize(name) %>Reducer } from "./<%= dasherize(name) %>.reducer";
 
 @NgModule({
   imports: [
-    StoreModule.forFeature("<%= camelize(name) %>", <%= classify(name) %>Reducer),
+    StoreModule.forFeature("<%= camelize(name) %>", <%= camelizen(name) %>Reducer),
     EffectsModule.forFeature([<%= classify(name) %>Effects]),
   ],
   providers: [
