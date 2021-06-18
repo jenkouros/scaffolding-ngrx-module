@@ -8,8 +8,8 @@ import * as <%= classify(name) %>Actions from "./<%= dasherize(name) %>.actions"
 @Injectable()
 export class <%= classify(name) %>Effects {
   constructor(
-    private actions: Actions,
-    private <%= camelize(name) %>apiService: <%= classify(name) %>ApiService
+    private actions$: Actions,
+    private <%= camelize(name) %>ApiService: <%= classify(name) %>ApiService
   ) {}
 
   // example
